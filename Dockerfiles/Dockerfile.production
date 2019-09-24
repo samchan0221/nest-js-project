@@ -1,0 +1,16 @@
+ARG NODE_VERSION=latest
+FROM node:${NODE_VERSION}
+
+
+WORKDIR /usr/src/app
+COPY . .
+
+ENV NODE_ENV production
+
+RUN npm update && \
+    npm install && \
+    npm run build
+
+# EXPOSE 7002 7002
+
+CMD ["npm", "run", "start:prod"]
