@@ -1,0 +1,8 @@
+FROM nest-js-app
+
+ENV NODE_ENV dev
+
+RUN npm update && \
+    npm install
+
+CMD ["npm","run","test"]
