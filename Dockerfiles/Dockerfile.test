@@ -1,8 +1,13 @@
-FROM nest-js-app
+ARG NODE_VERSION=latest
+FROM node:${NODE_VERSION}
+
+
+WORKDIR /usr/src/app
+COPY . .
 
 ENV NODE_ENV dev
 
 RUN npm update && \
     npm install
 
-CMD ["npm","run","test"]
+CMD ["npm", "run", "test"]
