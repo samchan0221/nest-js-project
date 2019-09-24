@@ -8,9 +8,10 @@ COPY . .
 ENV NODE_ENV production
 
 RUN npm update && \
+    npm install -g typescript \
     npm install && \
     npm run build
 
 # EXPOSE 7002 7002
 
-CMD ["npm", "run", "start:prod"]  
+CMD ["npm", "run", "start:prod"]
