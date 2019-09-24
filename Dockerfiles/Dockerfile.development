@@ -8,7 +8,7 @@ COPY . .
 ENV NODE_ENV dev
 
 RUN npm update && \
-    npm install && \
+    npm ci && \
     npm run test
 
 # EXPOSE 7002 7002
