@@ -8,6 +8,6 @@ COPY . .
 ENV NODE_ENV dev
 
 RUN npm update && \
-    npm install
+    npm install &&
 
 CMD ["npm", "run", "test"]
