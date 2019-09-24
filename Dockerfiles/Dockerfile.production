@@ -11,6 +11,6 @@ RUN npm update && \
     npm install && \
     npm run build
 
-# EXPOSE 7002 7002  
+# EXPOSE 7002 7002
 
-CMD ["npm", "run", "start:prod"]
+CMD ["npm", "run", "start:prod"]  
